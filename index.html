@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Library Management System</h1>
+
+  <section>
+    <h2>Add/Update Book</h2>
+    <form id="book-form">
+      <input name="id" type="hidden" />
+      <input name="title" placeholder="Title" required />
+      <input name="author" placeholder="Author" required />
+      <input name="genre" placeholder="Genre" required />
+      <input name="publishedYear" type="number" placeholder="Published Year" required />
+      <label><input name="available" type="checkbox" /> Available</label>
+      <button type="submit">Save Book</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Filters</h2>
+    <select id="genre-filter">
+      <option value="">All Genres</option>
+      <option value="Science Fiction">Science Fiction</option>
+      <option value="Dystopian">Dystopian</option>
+    </select>
+
+    <select id="sort-by">
+      <option value="">Sort By</option>
+      <option value="title">Title</option>
+      <option value="author">Author</option>
+      <option value="publishedYear">Published Year</option>
+    </select>
+  </section>
+
+  <section>
+    <h2>Books</h2>
+    <div id="book-list"></div>
+    <button id="prev-page">Prev</button>
+    <span id="page-info"></span>
+    <button id="next-page">Next</button>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
